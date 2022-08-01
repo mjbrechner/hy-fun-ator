@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hy-fun-ator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="heading">
+        <h1>Hy-fun-ator</h1>
+        <h2>Putting the fun in hyphenation</h2>
+        <div class="main-box">
+            <p>Want to see your hyphenated text with all kinds of possible dashes? Type something in the box using the
+                standard hyphen. After clicking the button, your hyphens should transform to match various kinds of
+                dashes.</p>
+            <label for="text-to-hyphenate">Add hyphenated text here:</label>
+            <input id="original-text" type="text">
+            <button id="hyphenator-button" onclick="hyphenator()">Hy-fun-ate!</button>
+        </div>
+    </div>
+    <div class="results-container">
+
+        <h3>No dash</h3>
+        <p id="results-no-dash" class="results" onclick="resultsNoDashCopier()">hy fun ator</p>
+
+        <h3>Hyphen</h3>
+        <p id="results-hyphen" class="results" onclick="resultsHyphenCopier()">hy-fun-ator</p>
+
+        <h3>Figure dash</h3>
+        <p id="results-figure-dash" class="results" onclick="resultsFigureDashCopier()">hy‒fun‒ator</p>
+
+        <h3>En dash</h3>
+        <p id="results-en-dash" class="results" onclick="resultsEnDashCopier()">hy–fun–ator</p>
+
+        <h3>Quotation dash</h3>
+        <p id="results-quotation-dash" class="results" onclick="resultsQuotationDashCopier()">hy―fun―ator</p>
+
+        <h3>Em dash</h3>
+        <p id="results-em-dash" class="results" onclick="resultsEmDashCopier()">hy—fun—ator</p>
+
+    </div>
+
+    <script src="js/hyphenator.js" async defer></script>
+    <script src="js/textcopier.js" async defer></script>
+
+    <footer>
+        <p>© 2022 M.J Brechner</p>
+    </footer>
+</body>
+
+</html>

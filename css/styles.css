@@ -1,0 +1,74 @@
+/* Colors from colorhunt.co
+#2C3639
+#3F4E4F
+#A27B5C
+#DCD7C9
+https://colorhunt.co/palette/2c36393f4e4fa27b5cdcd7c9 
+
+And for the text box: #f1f0eb
+*/
+
+body {
+    background-color: #DCD7C9;
+    color: #2C3639;
+}
+
+.heading {
+    text-align: center;
+}
+
+.main-box {
+    text-align: left;
+}
+
+#original-text {
+    width: 300px;
+    height: 5em;
+    border-radius: 5px;
+    background-color: #f1f0eb;
+}
+
+#original-text::selection {
+    background-color: #3F4E4F;
+    color: #DCD7C9;
+
+}
+
+#hyphenator-button {
+    background-color: #3F4E4F;
+    color: #DCD7C9;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    font-size: 1.5em;
+}
+
+.results-container > h3 {
+    grid-column-start: 1;
+}
+.results {
+    /* border: 1px;
+border-style: solid;
+border-radius: 5px; */
+    /* width: 100%; */
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px;
+    border: solid;
+    border-radius: 3px;
+    border-color: #DCD7C9;
+    grid-column-start: 2;
+}
+
+.results:hover {
+border-color: #3F4E4F;
+}
+
+footer {
+    text-align: center;
+}
