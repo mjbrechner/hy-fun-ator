@@ -71,7 +71,13 @@ transform: translate(1px);
 
 .results-container > h3 {
     grid-column-start: 1;
+    margin: 15px 0;
 }
+
+.results-container > p {
+    margin: 15px 0;
+}
+
 .results {
     cursor: pointer;
     width: fit-content;
