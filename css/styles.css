@@ -9,23 +9,35 @@ And for the text box: #f1f0eb
 */
 
 body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #DCD7C9;
     color: #2C3639;
 }
 
-.heading {
+.heading > h1, h2 {
     text-align: center;
+}
+
+.heading > p {
+    font-size: 1.25em;
 }
 
 .main-box {
     text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #original-text {
-    width: 300px;
-    height: 5em;
+    width: 50%;
+    height: 75px;
+    padding: 10px;
+    border-width: 2px;
     border-radius: 5px;
     background-color: #f1f0eb;
+    resize: none;
+    font-size: 1.25em;
 }
 
 #original-text::selection {
@@ -37,10 +49,17 @@ body {
 #hyphenator-button {
     background-color: #3F4E4F;
     color: #DCD7C9;
-    border-radius: 3px;
+    width: 125px;
+    height: 50px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1.25em;
+    box-shadow: 3px 3px #A27B5C;
 }
-
+#hyphenator-button:active {
+box-shadow: 1px 1px #A27B5C;
+transform: translate(1px);
+}
 .results-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -52,15 +71,11 @@ body {
     grid-column-start: 1;
 }
 .results {
-    /* border: 1px;
-border-style: solid;
-border-radius: 5px; */
-    /* width: 100%; */
     cursor: pointer;
     width: fit-content;
     padding: 5px;
     border: solid;
-    border-radius: 3px;
+    border-radius: 5px;
     border-color: #DCD7C9;
     grid-column-start: 2;
 }

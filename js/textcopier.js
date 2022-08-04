@@ -13,6 +13,8 @@ function copiedReturnToNormalNoDash() {
     document.getElementById("results-no-dash").textContent = resultsNoDashContents;
     document.getElementById("results-no-dash").style.backgroundColor = "#DCD7C9";
     document.getElementById("results-no-dash").style.color = "#3F4E4F";
+    // document.getElementById("results-no-dash").style.borderColor ="#DCD7C9";
+    // document.getElementById("results-no-dash").style.boxShadow = "none";
 }
 
 function copiedReturnToNormalHyphen() {
@@ -54,7 +56,9 @@ function resultsNoDashCopier() {
         document.getElementById("results-no-dash").textContent = "COPIED!";
         document.getElementById("results-no-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-no-dash").style.color = "#DCD7C9";
-        setTimeout(copiedReturnToNormalNoDash, 1000);
+        // document.getElementById("results-no-dash").style.borderColor ="#3F4E4F";
+        // document.getElementById("results-no-dash").style.boxShadow = "3px 3px #A27B5C";
+        setTimeout(copiedReturnToNormalNoDash, 750);
     }
 }
 
@@ -65,7 +69,7 @@ function resultsHyphenCopier() {
         document.getElementById("results-hyphen").textContent = "COPIED!";
         document.getElementById("results-hyphen").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-hyphen").style.color = "#DCD7C9";
-        setTimeout(copiedReturnToNormalHyphen, 1000);
+        setTimeout(copiedReturnToNormalHyphen, 750);
     }
 }
 
@@ -76,7 +80,7 @@ function resultsFigureDashCopier() {
         document.getElementById("results-figure-dash").textContent = "COPIED!";
         document.getElementById("results-figure-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-figure-dash").style.color = "#DCD7C9";
-        setTimeout(copiedReturnToNormalFigureDash, 1000);
+        setTimeout(copiedReturnToNormalFigureDash, 750);
     }
 }
 
@@ -87,7 +91,7 @@ function resultsEnDashCopier() {
         document.getElementById("results-en-dash").textContent = "COPIED!";
         document.getElementById("results-en-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-en-dash").style.color = "#DCD7C9";
-        setTimeout(copiedReturnToNormalEnDash, 1000);
+        setTimeout(copiedReturnToNormalEnDash, 750);
     }
 }
 
@@ -98,7 +102,7 @@ function resultsQuotationDashCopier() {
         document.getElementById("results-quotation-dash").textContent = "COPIED!";
         document.getElementById("results-quotation-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-quotation-dash").style.color = "#DCD7C9";
-        setTimeout(copiedReturnToNormalQuotationDash, 1000);
+        setTimeout(copiedReturnToNormalQuotationDash, 750);
     }
 }
 
@@ -110,6 +114,6 @@ function resultsEmDashCopier() {
         document.getElementById("results-em-dash").textContent = "COPIED!";
         document.getElementById("results-em-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-em-dash").style.color = "#DCD7C9";
-        setTimeout(copiedReturnToNormalEmDash, 1000);
+        setTimeout(copiedReturnToNormalEmDash, 750);
     }
 }
