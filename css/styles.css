@@ -25,7 +25,8 @@ body {
 .main-box {
     text-align: left;
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
+    gap: 2em;
     align-items: center;
 }
 
@@ -60,6 +61,7 @@ body {
 box-shadow: 1px 1px #A27B5C;
 transform: translate(1px);
 }
+
 .results-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
