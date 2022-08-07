@@ -14,18 +14,19 @@ body {
     color: #2C3639;
 }
 
-.heading > h1, h2 {
+.heading>h1,
+h2 {
     text-align: center;
 }
 
-.heading > p {
+.heading>p {
     font-size: 1.25em;
 }
 
 .main-box {
     text-align: left;
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
     gap: 2em;
     align-items: center;
 }
@@ -57,24 +58,25 @@ body {
     font-size: 1.25em;
     box-shadow: 3px 3px #A27B5C;
 }
+
 #hyphenator-button:active {
-box-shadow: 1px 1px #A27B5C;
-transform: translate(1px);
+    box-shadow: 1px 1px #A27B5C;
+    transform: translate(1px);
 }
 
 .results-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
-.results-container > h3 {
+.results-container>h3 {
     grid-column-start: 1;
     margin: 15px 0;
 }
 
-.results-container > p {
+.results-container>p {
     margin: 15px 0;
 }
 
@@ -89,9 +91,32 @@ transform: translate(1px);
 }
 
 .results:hover {
-border-color: #3F4E4F;
+    border-color: #3F4E4F;
 }
 
 footer {
     text-align: center;
+}
+
+/*tablet and above query*/
+@media only screen and (min-width: 768px) {
+
+    .main-box {
+        justify-content: center;
+    }
+
+    #hyphenator-button {
+        width: 175px;
+        height: 70px;
+        font-size: 1.75em;
+        box-shadow: 4px 4px #A27B5C;
+    }
+
+    #hyphenator-button:active {
+        box-shadow: 1.5px 1.5px #A27B5C;
+        transform: translate(1.5px);
+    }
+    .results-container {
+    font-size: 1.5em;
+}
 }
