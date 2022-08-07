@@ -13,8 +13,6 @@ function copiedReturnToNormalNoDash() {
     document.getElementById("results-no-dash").textContent = resultsNoDashContents;
     document.getElementById("results-no-dash").style.backgroundColor = "#DCD7C9";
     document.getElementById("results-no-dash").style.color = "#3F4E4F";
-    // document.getElementById("results-no-dash").style.borderColor ="#DCD7C9";
-    // document.getElementById("results-no-dash").style.boxShadow = "none";
 }
 
 function copiedReturnToNormalHyphen() {

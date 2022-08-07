@@ -105,6 +105,10 @@ footer {
         justify-content: center;
     }
 
+    #original-text {
+        font-size: 1.5em;
+    }
+
     #hyphenator-button {
         width: 175px;
         height: 70px;
@@ -116,7 +120,8 @@ footer {
         box-shadow: 1.5px 1.5px #A27B5C;
         transform: translate(1.5px);
     }
+
     .results-container {
-    font-size: 1.5em;
-}
+        font-size: 1.5em;
+    }
 }
