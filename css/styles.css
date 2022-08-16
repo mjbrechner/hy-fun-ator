@@ -14,13 +14,18 @@ body {
     color: #2C3639;
 }
 
-.heading>h1,
-h2 {
+.heading>h1 {
     text-align: center;
+    font-size: 2.5em;
+}
+
+.heading>h2 {
+    text-align: center;
+    font-size: 1.25em;
 }
 
 .heading>p {
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .main-box {
@@ -45,7 +50,6 @@ h2 {
 #original-text::selection {
     background-color: #3F4E4F;
     color: #DCD7C9;
-
 }
 
 #hyphenator-button {
@@ -100,6 +104,18 @@ footer {
 
 /*tablet and above query*/
 @media only screen and (min-width: 768px) {
+
+    .heading>h1 {
+        font-size: 3em;
+    }
+
+    .heading>h2 {
+        font-size: 1.5em;
+    }
+
+    .heading>p {
+        font-size: 1.25em;
+    }
 
     .main-box {
         justify-content: center;
