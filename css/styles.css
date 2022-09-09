@@ -5,7 +5,7 @@
 #DCD7C9
 https://colorhunt.co/palette/2c36393f4e4fa27b5cdcd7c9 
 
-And for the text box: #f1f0eb
+Additional color for the text box: #f1f0eb
 */
 
 body {
@@ -29,22 +29,23 @@ body {
 }
 
 .main-box {
-    text-align: left;
     display: flex;
-    justify-content: space-around;
     gap: 2em;
+    text-align: left;
+    justify-content: space-around;
     align-items: center;
 }
 
 #original-text {
+    background-color: #f1f0eb;
     width: 50%;
     height: 75px;
     padding: 10px;
     border-width: 2px;
     border-radius: 5px;
-    background-color: #f1f0eb;
-    resize: none;
+    border-color: #3F4E4F;
     font-size: 1.25em;
+    resize: none;
 }
 
 #original-text::selection {
@@ -53,13 +54,13 @@ body {
 }
 
 #hyphenator-button {
+    cursor: pointer;
     background-color: #3F4E4F;
     color: #DCD7C9;
     width: 125px;
     height: 50px;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 1.25em;
+    border-radius: 5px;
     box-shadow: 3px 3px #A27B5C;
 }
 
@@ -86,12 +87,12 @@ body {
 
 .results {
     cursor: pointer;
+    grid-column-start: 2;
     width: fit-content;
     padding: 5px;
     border: solid;
     border-radius: 5px;
     border-color: #DCD7C9;
-    grid-column-start: 2;
 }
 
 .results:hover {

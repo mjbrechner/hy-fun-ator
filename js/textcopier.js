@@ -54,8 +54,6 @@ function resultsNoDashCopier() {
         document.getElementById("results-no-dash").textContent = "COPIED!";
         document.getElementById("results-no-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-no-dash").style.color = "#DCD7C9";
-        // document.getElementById("results-no-dash").style.borderColor ="#3F4E4F";
-        // document.getElementById("results-no-dash").style.boxShadow = "3px 3px #A27B5C";
         setTimeout(copiedReturnToNormalNoDash, 750);
     }
 }
