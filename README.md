@@ -5,4 +5,4 @@ This is a simple site to help convert hyphens to various styles of dashes. Input
 
 Viewable at: https://mjbrechner.github.io/hy-fun-ator/
 
-© 2022 M.J. Brechner
+© 2022-2023 M.J. Brechner
