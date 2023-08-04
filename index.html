@@ -21,49 +21,76 @@
 
 <body>
 
-    <div class="heading">
-        <h1>Hy-fun-ator</h1>
-        <h2>Putting the fun into hyphenation</h2>
-        <p>Want to see your hyphenated text with all kinds of possible dashes? Type something into the box and click the
-            button to transform your existing hyphenation into a smorgasbord of dashes.</p>
-        <div class="main-box">
-            <textarea id="original-text" aria-label="textbox"></textarea>
-            <button id="hyphenator-button" onclick="hyphenator()">Hy-fun-ate!</button>
+    <div id="news">
+        <h3 onclick="updateInfo()">updates</h3>
+    </div>
+
+    <div id="updateInfo" onclick="hideUpdateInfo()">
+        <p>3 August 2023: Added an alternate version of the hyphen found in Unicode.
+            The most common hyphen, referred to as the "hyphen-minus,"
+            appears on most keyboards and is used for a minus sign, dash, or hyphen.
+            This version of the hyphen has been with the Hy-fun-ator since the beginning,
+            but has now been renamed "Hyphen-minus."</p>
+
+            <p>A different version of hyphen, used in Unicode, appears on occassion, though this is just
+            a version of the standard hyphen. Despite looking virtually identical to the hyphen-minus,
+            it is treated as a unique character. This update adds functionality for this character to
+            the Hy-fun-ator as Hyphen (Unicode).</p>
+    </div>
+
+    <main onclick="hideUpdateInfo()">
+        <div class="heading">
+            <h1>Hy-fun-ator</h1>
+            <h2>Putting the fun into hyphenation</h2>
+            <p>Want to see your hyphenated text with all kinds of possible dashes? Type something into the box and click
+                the
+                button to transform your existing hyphenation into a smorgasbord of dashes.</p>
+            <div class="main-box">
+                <textarea id="original-text" aria-label="textbox"></textarea>
+                <button id="hyphenator-button" onclick="hyphenator()">Hy-fun-ate!</button>
+            </div>
         </div>
-    </div>
-    <div class="results-container">
+        <div class="results-container">
 
-        <h3>No dash</h3>
-        <p id="results-no-dash" class="results" onclick="resultsNoDashCopier()">hy fun ator</p>
+            <h3>No dash</h3>
+            <p id="results-no-dash" class="results" onclick="resultsNoDashCopier()">hy fun ator</p>
 
-        <h3>Hyphen</h3>
-        <p id="results-hyphen" class="results" onclick="resultsHyphenCopier()">hy-fun-ator</p>
+            <h3>Hyphen-minus</h3>
+            <p id="results-hyphen" class="results" onclick="resultsHyphenCopier()">hy-fun-ator</p>
 
-        <h3>Figure dash</h3>
-        <p id="results-figure-dash" class="results" onclick="resultsFigureDashCopier()">hy‒fun‒ator</p>
+            <h3>Figure dash</h3>
+            <p id="results-figure-dash" class="results" onclick="resultsFigureDashCopier()">hy‒fun‒ator</p>
 
-        <h3>En dash</h3>
-        <p id="results-en-dash" class="results" onclick="resultsEnDashCopier()">hy–fun–ator</p>
+            <h3>En dash</h3>
+            <p id="results-en-dash" class="results" onclick="resultsEnDashCopier()">hy–fun–ator</p>
 
-        <h3>Quotation dash</h3>
-        <p id="results-quotation-dash" class="results" onclick="resultsQuotationDashCopier()">hy―fun―ator</p>
+            <h3>Quotation dash</h3>
+            <p id="results-quotation-dash" class="results" onclick="resultsQuotationDashCopier()">hy―fun―ator</p>
 
-        <h3>Em dash</h3>
-        <p id="results-em-dash" class="results" onclick="resultsEmDashCopier()">hy—fun—ator</p>
+            <h3>Em dash</h3>
+            <p id="results-em-dash" class="results" onclick="resultsEmDashCopier()">hy—fun—ator</p>
 
-    </div>
+            <h3>Hyphen (Unicode)</h3>
+            <p id="results-hyphen2" class="results" onclick="resultsHyphen2Copier()">hy‐fun‐ator</p>
 
-    <script src="js/hyphenator.js" async defer></script>
-    <script src="js/textcopier.js" async defer></script>
+        </div>
+    </main>
 
-    <footer>
+    <footer onclick="hideUpdateInfo()">
         <p>
-            <script>document.write(`Copyright © 2022-${new Date().getFullYear()} `);</script>
+            <script>
+                document.write(`Copyright © 2022-${new Date().getFullYear()} `);
+            </script>
             <a href="https://github.com/mjbrechner">M.J. Brechner</a>
         </p>
         <!-- Profile picture created by M.J. Brechner © 2022 -->
-        <img class="profile-pic" src="https://raw.githubusercontent.com/mjbrechner/diacritics-eraser/main/images/profile-pic.png">
+        <img class="profile-pic"
+            src="https://raw.githubusercontent.com/mjbrechner/diacritics-eraser/main/images/profile-pic.png">
     </footer>
+
+    <script src="js/hyphenator.js" async defer></script>
+    <script src="js/textcopier.js" async defer></script>
+    <script src="js/update.js" async defer></script>
 </body>
 
 </html>

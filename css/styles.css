@@ -8,12 +8,59 @@ https://colorhunt.co/palette/2c36393f4e4fa27b5cdcd7c9
 Additional color for the text box: #f1f0eb
 */
 
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #DCD7C9;
     color: #2C3639;
 }
 
+h1,
+h2,
+h3 {
+    text-shadow: 1px 1px 2px #A27B5C;
+}
+
+#news {
+    color: #A27B5C;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: min-content;
+    width: min-content;
+    font-size: .75em;
+    cursor: pointer;
+    white-space: nowrap;
+    text-shadow: 1px 1px 2px #3F4E4F;
+}
+
+#updateInfo {
+    /* display: flex; */
+    background-color: #3F4E4F;
+    color: #DCD7C9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5px;
+    width: 90%;
+    height: max-content;
+    z-index: 1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #A27B5C;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 1.25em;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+main {
+    top: 0;
+    left: 0;
+}
 .heading>h1 {
     text-align: center;
     font-size: 2.5em;
@@ -41,10 +88,10 @@ body {
     width: 50%;
     height: 75px;
     padding: 10px;
+    font-size: 1.25em;
     border-width: 2px;
     border-radius: 5px;
     border-color: #3F4E4F;
-    font-size: 1.25em;
     resize: none;
 }
 

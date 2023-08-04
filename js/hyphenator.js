@@ -8,6 +8,7 @@ function removeTextDecoration() {
     document.getElementById("results-en-dash").style.textDecoration = "none";
     document.getElementById("results-quotation-dash").style.textDecoration = "none";
     document.getElementById("results-em-dash").style.textDecoration = "none";
+    document.getElementById("results-hyphen2").style.textDecoration = "none";
 }
 
 // Running the actual hyphenator
@@ -17,11 +18,12 @@ function hyphenator() {
 
     if (e !== "") {
         removeTextDecoration();
-        document.getElementById("results-no-dash").textContent = e.replace(/[-‒–―—]/g, ' ');
-        document.getElementById("results-hyphen").textContent = e.replace(/[-‒–―—]/g, '-');;
-        document.getElementById("results-figure-dash").textContent = e.replace(/[-‒–―—]/g, '‒');
-        document.getElementById("results-en-dash").textContent = e.replace(/[-‒–―—]/g, '–');
-        document.getElementById("results-quotation-dash").textContent = e.replace(/[-‒–―—]/g, '―');
-        document.getElementById("results-em-dash").textContent = e.replace(/[-‒–―—]/g, '—');
+        document.getElementById("results-no-dash").textContent = e.replace(/[-‒–―—‐]/g, ' ');
+        document.getElementById("results-hyphen").textContent = e.replace(/[-‒–―—‐]/g, '-');;
+        document.getElementById("results-figure-dash").textContent = e.replace(/[-‒–―—‐]/g, '‒');
+        document.getElementById("results-en-dash").textContent = e.replace(/[-‒–―—‐]/g, '–');
+        document.getElementById("results-quotation-dash").textContent = e.replace(/[-‒–―—‐]/g, '―');
+        document.getElementById("results-em-dash").textContent = e.replace(/[-‒–―—‐]/g, '—');
+        document.getElementById("results-hyphen2").textContent = e.replace(/[-‒–―—‐]/g, '‐');
     }
 }

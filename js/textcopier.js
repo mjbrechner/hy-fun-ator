@@ -6,6 +6,7 @@ let resultsFigureDashContents;
 let resultsEnDashContents;
 let resultsQuotationDashContents;
 let resultsEmDashContents;
+let resultsHyphen2Contents;
 
 // Returning appearance to normal after COPY message appears
 // Adding text decoration to highlight the most recent line that was copied
@@ -49,6 +50,13 @@ function copiedReturnToNormalEmDash() {
     document.getElementById("results-em-dash").style.backgroundColor = "#DCD7C9";
     document.getElementById("results-em-dash").style.color = "#3F4E4F";
     document.getElementById("results-em-dash").style.textDecoration = "underline #A27B5C";
+}
+
+function copiedReturnToNormalHyphen2() {
+    document.getElementById("results-hyphen2").textContent = resultsHyphen2Contents;
+    document.getElementById("results-hyphen2").style.backgroundColor = "#DCD7C9";
+    document.getElementById("results-hyphen2").style.color = "#3F4E4F";
+    document.getElementById("results-hyphen2").style.textDecoration = "underline #A27B5C";
 }
 
 // Copying contents to clipboard and flashing notifications
@@ -122,5 +130,17 @@ function resultsEmDashCopier() {
         document.getElementById("results-em-dash").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-em-dash").style.color = "#DCD7C9";
         setTimeout(copiedReturnToNormalEmDash, 750);
+    }
+}
+
+function resultsHyphen2Copier() {
+    if (document.getElementById("results-hyphen2").textContent != "COPIED!") {
+        resultsHyphen2Contents = document.getElementById("results-hyphen2").textContent;
+        navigator.clipboard.writeText(resultsHyphen2Contents);
+        removeTextDecoration();
+        document.getElementById("results-hyphen2").textContent = "COPIED!";
+        document.getElementById("results-hyphen2").style.backgroundColor = "#3F4E4F";
+        document.getElementById("results-hyphen2").style.color = "#DCD7C9";
+        setTimeout(copiedReturnToNormalHyphen2, 750);
     }
 }
