@@ -1,9 +1,15 @@
 'use strict';
 
+let updateInfoVisibility = document.getElementById("updateInfo");
+
 function updateInfo() {
-    document.getElementById("updateInfo").style.visibility = "visible";
+    if (updateInfoVisibility.style.visibility == "hidden") {
+        updateInfoVisibility.style.visibility = "visible";
+    } else {
+        updateInfoVisibility.style.visibility = "hidden";
+    }
 }
 
 function hideUpdateInfo() {
-    document.getElementById("updateInfo").style.visibility = "hidden";
+    updateInfoVisibility.style.visibility = "hidden";
 }
