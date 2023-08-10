@@ -2,11 +2,15 @@
 
 let updateInfoVisibility = document.getElementById("updateInfo");
 
+let isUpdateOpen = "no";
+
 function updateInfo() {
-    if (updateInfoVisibility.style.visibility == "hidden") {
+    if (isUpdateOpen == "no") {
         updateInfoVisibility.style.visibility = "visible";
-    } else {
+        isUpdateOpen = "yes";
+    } else if (isUpdateOpen == "yes") {
         updateInfoVisibility.style.visibility = "hidden";
+        isUpdateOpen = "no";
     }
 }
 
