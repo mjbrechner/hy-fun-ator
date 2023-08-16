@@ -19,6 +19,8 @@ h1,
 h2,
 h3 {
     text-shadow: 1px 1px 2px #A27B5C;
+    padding: .25em;
+    margin: 0;
 }
 
 #news {
@@ -61,9 +63,10 @@ main {
     top: 0;
     left: 0;
 }
+
 .heading>h1 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .heading>h2 {
@@ -85,14 +88,16 @@ main {
 
 #original-text {
     background-color: #f1f0eb;
-    width: 50%;
-    height: 75px;
-    padding: 10px;
+    width: 60%;
+    height: 40px;
+    padding: 5px;
     font-size: 1.25em;
     border-width: 2px;
     border-radius: 5px;
     border-color: #3F4E4F;
     resize: none;
+    white-space: nowrap;
+    overflow-x: scroll;
 }
 
 #original-text::selection {
@@ -104,7 +109,7 @@ main {
     cursor: pointer;
     background-color: #3F4E4F;
     color: #DCD7C9;
-    width: 125px;
+    width: 120px;
     height: 50px;
     font-size: 1.25em;
     border-radius: 5px;
@@ -119,17 +124,18 @@ main {
 .results-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 3px;
+    margin: .25em 0 .25em 0;
     font-size: 1em;
 }
 
 .results-container>h3 {
     grid-column-start: 1;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .results-container>p {
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .results {
@@ -152,7 +158,6 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: .5em;
 }
 
 a {
@@ -170,15 +175,15 @@ a {
 @media only screen and (min-width: 768px) {
 
     .heading>h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .heading>h2 {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
     .heading>p {
-        font-size: 1.25em;
+        font-size: 1.10em;
     }
 
     .main-box {
@@ -186,6 +191,8 @@ a {
     }
 
     #original-text {
+        height: 55px;
+        padding: 5px;
         font-size: 1.75em;
     }
 
@@ -202,16 +209,52 @@ a {
     }
 
     .results-container {
-        font-size: 1.5em;
+        gap: 4px;
+        margin: .5em 0 .5em 0;
+        font-size: 1.25em;
     }
 
     footer {
         flex-direction: row;
-        margin-top: 1em;
     }
 
     .profile-pic {
         width: 3.75em;
         height: 3.75em;
     }
+}
+
+/*desktop query*/
+@media only screen and (min-width: 992px) {
+
+        .heading>h1 {
+        font-size: 2.6em;
+    }
+
+    .heading>h2 {
+        font-size: 1.35em;
+    }
+
+    .heading>p {
+        font-size: 1.2em;
+    }
+
+    #original-text {
+        height: 60px;
+        padding: 5px;
+    }
+
+    .results-container {
+        gap: 5px;
+        font-size: 1.5em;
+    }
+
+    .results-container>h3 {
+        margin: 8px 0;
+    }
+
+    .results-container>p {
+        margin: 8px 0;
+    }
+
 }
