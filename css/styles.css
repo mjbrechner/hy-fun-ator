@@ -37,7 +37,6 @@ h3 {
 }
 
 #updateInfo {
-    /* display: flex; */
     background-color: #3F4E4F;
     color: #DCD7C9;
     position: absolute;
@@ -94,10 +93,16 @@ main {
     font-size: 1.25em;
     border-width: 2px;
     border-radius: 5px;
+    border-style: solid;
     border-color: #3F4E4F;
     resize: none;
     white-space: nowrap;
     overflow-x: scroll;
+}
+
+#original-text:focus {
+    outline: none !important;
+    border-color: #A27B5C;
 }
 
 #original-text::selection {
@@ -193,7 +198,6 @@ a {
 
     #original-text {
         height: 55px;
-        /* padding: 5px; */
         font-size: 1.75em;
     }
 
@@ -246,7 +250,6 @@ a {
 
     #original-text {
         height: 60px;
-        /* padding: 5px; */
     }
 
     .results-container {
@@ -262,5 +265,4 @@ a {
     .results-container>p {
         margin: 8px 0;
     }
-
 }
