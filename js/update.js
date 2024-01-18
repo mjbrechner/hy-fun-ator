@@ -16,4 +16,5 @@ function updateInfo() {
 
 function hideUpdateInfo() {
     updateInfoVisibility.style.visibility = "hidden";
+    isUpdateOpen = "no";
 }
