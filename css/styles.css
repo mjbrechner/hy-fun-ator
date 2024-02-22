@@ -110,7 +110,8 @@ main {
     color: #DCD7C9;
 }
 
-#hyphenator-button {
+#hyphenator-button,
+#apostrophenator-button {
     cursor: pointer;
     background-color: #3F4E4F;
     color: #DCD7C9;
@@ -121,7 +122,12 @@ main {
     box-shadow: 3px 3px #A27B5C;
 }
 
-#hyphenator-button:active {
+#apostrophenator-button {
+    font-size: .9em;
+}
+
+#hyphenator-button:active,
+#apostrophenator-button:active {
     box-shadow: 1px 1px #A27B5C;
     transform: translate(1px);
 }
@@ -201,14 +207,20 @@ a {
         font-size: 1.75em;
     }
 
-    #hyphenator-button {
+    #hyphenator-button,
+    #apostrophenator-button {
         width: 175px;
         height: 70px;
         font-size: 1.75em;
         box-shadow: 4px 4px #A27B5C;
     }
 
-    #hyphenator-button:active {
+    #apostrophenator-button {
+        font-size: 1.35em;
+    }
+
+    #hyphenator-button:active,
+    #apostrophenator-button:active {
         box-shadow: 1.5px 1.5px #A27B5C;
         transform: translate(1.5px);
     }
