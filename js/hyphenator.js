@@ -9,6 +9,7 @@ function removeTextDecoration() {
     document.getElementById("results-quotation-dash").style.textDecoration = "none";
     document.getElementById("results-em-dash").style.textDecoration = "none";
     document.getElementById("results-hyphen2").style.textDecoration = "none";
+    document.getElementById("results-nospace").style.textDecoration = "none";
 }
 
 // Running the actual hyphenator
@@ -25,5 +26,6 @@ function hyphenator() {
         document.getElementById("results-quotation-dash").textContent = e.replace(/[-‒–―—‐]/g, '―');
         document.getElementById("results-em-dash").textContent = e.replace(/[-‒–―—‐]/g, '—');
         document.getElementById("results-hyphen2").textContent = e.replace(/[-‒–―—‐]/g, '‐');
+        document.getElementById("results-nospace").textContent = e.replace(/[-‒–―—‐]/g, '');
     }
 }

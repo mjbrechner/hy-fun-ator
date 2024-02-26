@@ -7,6 +7,7 @@ let resultsEnDashContents;
 let resultsQuotationDashContents;
 let resultsEmDashContents;
 let resultsHyphen2Contents;
+let resultsNoSpaceContents;
 
 // Returning appearance to normal after COPY message appears
 // Adding text decoration to highlight the most recent line that was copied
@@ -57,6 +58,13 @@ function copiedReturnToNormalHyphen2() {
     document.getElementById("results-hyphen2").style.backgroundColor = "#DCD7C9";
     document.getElementById("results-hyphen2").style.color = "#3F4E4F";
     document.getElementById("results-hyphen2").style.textDecoration = "underline #A27B5C";
+}
+
+function copiedReturnToNormalNoSpace() {
+    document.getElementById("results-nospace").textContent = resultsNoSpaceContents;
+    document.getElementById("results-nospace").style.backgroundColor = "#DCD7C9";
+    document.getElementById("results-nospace").style.color = "#3F4E4F";
+    document.getElementById("results-nospace").style.textDecoration = "underline #A27B5C";
 }
 
 // Copying contents to clipboard and flashing notifications
@@ -121,7 +129,6 @@ function resultsQuotationDashCopier() {
 }
 
 function resultsEmDashCopier() {
-
     if (document.getElementById("results-em-dash").textContent != "COPIED!") {
         resultsEmDashContents = document.getElementById("results-em-dash").textContent;
         navigator.clipboard.writeText(resultsEmDashContents);
@@ -142,5 +149,17 @@ function resultsHyphen2Copier() {
         document.getElementById("results-hyphen2").style.backgroundColor = "#3F4E4F";
         document.getElementById("results-hyphen2").style.color = "#DCD7C9";
         setTimeout(copiedReturnToNormalHyphen2, 750);
+    }
+}
+
+function resultsNoSpaceCopier() {
+    if (document.getElementById("results-nospace").textContent != "COPIED!") {
+        resultsNoSpaceContents = document.getElementById("results-nospace").textContent;
+        navigator.clipboard.writeText(resultsNoSpaceContents);
+        removeTextDecoration();
+        document.getElementById("results-nospace").textContent = "COPIED!";
+        document.getElementById("results-nospace").style.backgroundColor = "#3F4E4F";
+        document.getElementById("results-nospace").style.color = "#DCD7C9";
+        setTimeout(copiedReturnToNormalNoSpace, 750);
     }
 }
