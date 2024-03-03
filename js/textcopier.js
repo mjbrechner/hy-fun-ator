@@ -163,3 +163,50 @@ function resultsNoSpaceCopier() {
         setTimeout(copiedReturnToNormalNoSpace, 750);
     }
 }
+
+// Again, but for the apostrophenator
+
+let resultsTypewriterContents;
+let resultsTypographicContents;
+
+// Returning appearance to normal after COPY message appears
+// Adding text decoration to highlight the most recent line that was copied
+function copiedReturnToNormalTypewriter() {
+    document.getElementById("results-typewriter").textContent = resultsTypewriterContents;
+    document.getElementById("results-typewriter").style.backgroundColor = "#DCD7C9";
+    document.getElementById("results-typewriter").style.color = "#3F4E4F";
+    document.getElementById("results-typewriter").style.textDecoration = "underline #A27B5C";
+}
+
+function copiedReturnToNormalTypographic() {
+    document.getElementById("results-typographic").textContent = resultsTypographicContents;
+    document.getElementById("results-typographic").style.backgroundColor = "#DCD7C9";
+    document.getElementById("results-typographic").style.color = "#3F4E4F";
+    document.getElementById("results-typographic").style.textDecoration = "underline #A27B5C";
+}
+
+
+// Copying contents to clipboard and flashing notifications
+function resultsTypewriterCopier() {
+    if (document.getElementById("results-typewriter").textContent != "COPIED!") {
+        resultsTypewriterContents = document.getElementById("results-typewriter").textContent;
+        navigator.clipboard.writeText(resultsTypewriterContents);
+        removeTextDecoration();
+        document.getElementById("results-typewriter").textContent = "COPIED!";
+        document.getElementById("results-typewriter").style.backgroundColor = "#3F4E4F";
+        document.getElementById("results-typewriter").style.color = "#DCD7C9";
+        setTimeout(copiedReturnToNormalTypewriter, 750);
+    }
+}
+
+function resultsTypographicCopier() {
+    if (document.getElementById("results-typographic").textContent != "COPIED!") {
+        resultsTypographicContents = document.getElementById("results-typographic").textContent;
+        navigator.clipboard.writeText(resultsTypographicContents);
+        removeTextDecoration();
+        document.getElementById("results-typographic").textContent = "COPIED!";
+        document.getElementById("results-typographic").style.backgroundColor = "#3F4E4F";
+        document.getElementById("results-typographic").style.color = "#DCD7C9";
+        setTimeout(copiedReturnToNormalTypographic, 750);
+    }
+}
