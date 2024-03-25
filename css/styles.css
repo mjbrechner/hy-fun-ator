@@ -27,6 +27,12 @@ p {
     margin: .5em;
 }
 
+
+#info-text>a {
+    font-size: 1.25em;
+    text-shadow: 1px 1px 2px #A27B5C;
+}
+
 #news {
     color: #A27B5C;
     position: absolute;
