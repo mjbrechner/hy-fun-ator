@@ -93,6 +93,7 @@ main {
     text-align: left;
     justify-content: space-around;
     align-items: center;
+    margin-top: .5em;
 }
 
 #original-text {
@@ -216,6 +217,7 @@ a {
 
     .main-box {
         justify-content: center;
+        margin-top: .75em;
     }
 
     #original-text {
@@ -280,6 +282,11 @@ a {
 
     .heading>p {
         font-size: 1.2em;
+    }
+
+    .main-box {
+        justify-content: center;
+        margin-top: 1em;
     }
 
     #original-text {
