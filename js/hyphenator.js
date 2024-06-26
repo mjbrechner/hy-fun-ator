@@ -1,5 +1,7 @@
 'use strict';
 
+const originalTextHyphenator = document.getElementById("original-text");
+
 // Getting rid of text decoration, for when the hyphenator is active OR when the COPIED! message pops up
 function removeTextDecoration() {
     document.getElementById("results-no-dash").style.textDecoration = "none";
@@ -15,7 +17,7 @@ function removeTextDecoration() {
 // Running the actual hyphenator
 function hyphenator() {
     let e;
-    e = document.getElementById("original-text").value;
+    e = originalTextHyphenator.value;
 
     if (e !== "") {
         removeTextDecoration();
@@ -29,3 +31,11 @@ function hyphenator() {
         document.getElementById("results-nospace").textContent = e.replace(/[-‒–―—‐]/g, '');
     }
 }
+
+// Enter key activating the button press
+originalTextHyphenator.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("hyphenator-button").click();
+    }
+});
