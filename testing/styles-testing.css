@@ -48,22 +48,16 @@ p {
 }
 
 #info-text {
-    /* display: flex; */
     font-size: 1em;
 }
-
-/* #info-text>a {
-    font-size: 1.25em;
-    text-shadow: 1px 1px 2px #A27B5C;
-} */
 
 #news {
     color: #A27B5C;
     position: absolute;
     left: 5px;
     top: 5px;
-    height: min-content;
     width: min-content;
+    height: min-content;
     font-size: .75em;
     cursor: pointer;
     white-space: nowrap;
@@ -185,6 +179,10 @@ main {
     margin: 5px 0;
 }
 
+#results-container-apostrophenator {
+    display: none;
+}
+
 .results {
     cursor: pointer;
     grid-column-start: 2;
@@ -209,7 +207,6 @@ footer {
 
 a {
     color: #2C3639;
-
 }
 
 .profile-pic {

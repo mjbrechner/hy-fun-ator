@@ -5,6 +5,9 @@ const title = document.getElementById("title");
 const title2 = document.getElementById("title-2");
 const infoText = document.getElementById("info-text");
 const changeModeButton = document.getElementById("change-mode-button");
+const hyphenatorArea = document.getElementById("results-container-hyphenator");
+const apostrophenatorArea = document.getElementById("results-container-apostrophenator");
+
 let currentMode = "hyphenate";
 
 // Getting rid of text decoration, for when the hyphenator is active OR when the COPIED! message pops up
@@ -54,15 +57,19 @@ originalTextHyphenator.addEventListener("keypress", function (event) {
 function changeMode() {
     if (currentMode === "hyphenate") {
         currentMode = "apostrophenate";
-        title.innerText ="Apostrophe'nator";
+        title.innerText = "Apostrophe'nator";
         title2.innerText = "explore varieties of apostrophes";
         infoText.innerText = "Want to see your text displayed with multiple versions of the apostrophe? Type something into the box and click the button to transform your existing text.";
         changeModeButton.innerText = "Hy-fun-ator";
+        apostrophenatorArea.style.display = "grid";
+        hyphenatorArea.style.display = "none";
     } else if (currentMode === "apostrophenate") {
-                currentMode = "hyphenate";
-                        title.innerText ="Hy-fun-ator";
+        currentMode = "hyphenate";
+        title.innerText = "Hy-fun-ator";
         title2.innerText = "putting the fun into hyphenation";
         infoText.innerText = "Want to see your hyphenated text with all kinds of possible dashes? Type something into the box and click the button to transform your existing hyphenation into a smorgasbord of dashes.";
         changeModeButton.innerText = "Apostrophe'nator";
+        apostrophenatorArea.style.display = "none";
+        hyphenatorArea.style.display = "grid";
     }
 }
