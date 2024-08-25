@@ -33,7 +33,7 @@ function hyphenator() {
     if (e !== "") {
         removeTextDecoration();
         document.getElementById("results-no-dash").textContent = e.replace(/[-‒–―—‐]/g, ' ');
-        document.getElementById("results-hyphen").textContent = e.replace(/[-‒–―—‐]/g, '-');;
+        document.getElementById("results-hyphen").textContent = e.replace(/[-‒–―—‐]/g, '-');
         document.getElementById("results-figure-dash").textContent = e.replace(/[-‒–―—‐]/g, '‒');
         document.getElementById("results-en-dash").textContent = e.replace(/[-‒–―—‐]/g, '–');
         document.getElementById("results-quotation-dash").textContent = e.replace(/[-‒–―—‐]/g, '―');
@@ -42,7 +42,7 @@ function hyphenator() {
         document.getElementById("results-nospace").textContent = e.replace(/[-‒–―—‐]/g, '');
 
         document.getElementById("results-typewriter").textContent = e.replace(/['’]/g, `'`);
-        document.getElementById("results-typographic").textContent = e.replace(/['’]/g, '’');;
+        document.getElementById("results-typographic").textContent = e.replace(/['’]/g, '’');
     }
 }
 
@@ -55,6 +55,8 @@ originalTextHyphenator.addEventListener("keypress", function (event) {
 });
 
 function changeMode() {
+    originalTextHyphenator.value = "";
+
     if (currentMode === "hyphenate") {
         currentMode = "apostrophenate";
         title.innerText = "Apostrophe'nator";
@@ -63,6 +65,10 @@ function changeMode() {
         changeModeButton.innerText = "Hy-fun-ator";
         apostrophenatorArea.style.display = "grid";
         hyphenatorArea.style.display = "none";
+
+        document.getElementById("results-typewriter").textContent = `Apostrophe'nator`;
+        document.getElementById("results-typographic").textContent = `Apostrophe’nator`;
+
     } else if (currentMode === "apostrophenate") {
         currentMode = "hyphenate";
         title.innerText = "Hy-fun-ator";
@@ -71,5 +77,14 @@ function changeMode() {
         changeModeButton.innerText = "Apostrophe'nator";
         apostrophenatorArea.style.display = "none";
         hyphenatorArea.style.display = "grid";
+
+        document.getElementById("results-no-dash").textContent = `hy fun ator`;
+        document.getElementById("results-hyphen").textContent = `hy-fun-ator`;
+        document.getElementById("results-figure-dash").textContent = `hy‒fun‒ator`;
+        document.getElementById("results-en-dash").textContent = `hy–fun–ator`;
+        document.getElementById("results-quotation-dash").textContent = `hy―fun―ator`;
+        document.getElementById("results-em-dash").textContent = `hy—fun—ator`;
+        document.getElementById("results-hyphen2").textContent = `hy‐fun‐ator`;
+        document.getElementById("results-nospace").textContent = `hyfunator`;
     }
 }
