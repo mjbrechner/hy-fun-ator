@@ -26,6 +26,8 @@
     </div>
 
     <div id="updateInfo" onclick="hideUpdateInfo()">
+        <p>27 August 2024: Both modes use the same html site, allowing for smoother toggling between the two.</p>
+
         <p>16 March 2024: Added the Apostrophe'nator.</p>
 
         <p>26 February 2024: Added a "no dash, no space" option.</p>
@@ -44,18 +46,21 @@
 
     <main onclick="hideUpdateInfo()">
         <div class="heading">
-            <h1>Hy-fun-ator</h1>
-            <h2>Putting the fun into hyphenation</h2>
-            <p id="info-text">Want to see your hyphenated text with all kinds of possible dashes? Type something into the box and click
-                the
-                button to transform your existing hyphenation into a smorgasbord of dashes.</p>
-                <p id="info-text">For apostrophe variations, check out the <a href="apostrophenator.html">Apostrophe'nator</a>!</p>
+            <h1 id="title">Hy-fun-ator</h1>
+            <h2 id="title-2">putting the fun into hyphenation</h2>
+            <div id="info-text">
+                Want to see your hyphenated text with all kinds of possible dashes? Type something into the box and
+                click the button to transform your existing hyphenation into a smorgasbord of dashes.
+            </div>
+
+            <button id="change-mode-button" onclick="changeMode()">Apostrophe'nator</button>
+
             <div class="main-box">
                 <input type="text" id="original-text" aria-label="textbox" rows="1"></input>
                 <button id="hyphenator-button" onclick="hyphenator()">Hy-fun-ate!</button>
             </div>
         </div>
-        <div class="results-container">
+        <div class="results-container" id="results-container-hyphenator">
 
             <h3>No dash</h3>
             <p id="results-no-dash" class="results" onclick="resultsNoDashCopier()">hy fun ator</p>
@@ -81,6 +86,17 @@
             <h3>No dash, no space</h3>
             <p id="results-nospace" class="results" onclick="resultsNoSpaceCopier()">hyfunator</p>
         </div>
+
+        <div class="results-container" id="results-container-apostrophenator">
+
+            <h3>Typewriter apostrophe</h3>
+            <p id="results-typewriter" class="results" onclick="resultsTypewriterCopier()">Apostrophe'nator</p>
+
+            <h3>Typographic apostrophe</h3>
+            <p id="results-typographic" class="results" onclick="resultsTypographicCopier()">Apostrophe’nator</p>
+
+        </div>
+
     </main>
 
     <footer onclick="hideUpdateInfo()">

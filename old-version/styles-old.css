@@ -27,28 +27,10 @@ p {
     margin: .5em;
 }
 
-#change-mode-button {
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    background-color: #A27B5C;
-    color: #DCD7C9;
-    padding: .2em;
-    margin: 0;
-    font-size: .75em;
-    border: 2px solid #A27B5C;
-    border-radius: 5px;
-    box-shadow: 3px 3px #3F4E4F;
-    cursor: pointer;
-}
 
-#change-mode-button:active {
-    box-shadow: 1px 1px #3F4E4F;
-    transform: translate(1px);
-}
-
-#info-text {
-    font-size: 1em;
+#info-text>a {
+    font-size: 1.25em;
+    text-shadow: 1px 1px 2px #A27B5C;
 }
 
 #news {
@@ -56,8 +38,8 @@ p {
     position: absolute;
     left: 5px;
     top: 5px;
-    width: min-content;
     height: min-content;
+    width: min-content;
     font-size: .75em;
     cursor: pointer;
     white-space: nowrap;
@@ -179,10 +161,6 @@ main {
     margin: 5px 0;
 }
 
-#results-container-apostrophenator {
-    display: none;
-}
-
 .results {
     cursor: pointer;
     grid-column-start: 2;
@@ -207,6 +185,7 @@ footer {
 
 a {
     color: #2C3639;
+
 }
 
 .profile-pic {
@@ -234,14 +213,6 @@ a {
 
     .heading>p {
         font-size: 1.10em;
-    }
-
-    #change-mode-button {
-        font-size: .85em;
-    }
-
-    #info-text {
-        font-size: 1.1em;
     }
 
     .main-box {
@@ -311,14 +282,6 @@ a {
 
     .heading>p {
         font-size: 1.2em;
-    }
-
-    #change-mode-button {
-        font-size: 1em;
-    }
-
-    #info-text {
-        font-size: 1.25em;
     }
 
     .main-box {

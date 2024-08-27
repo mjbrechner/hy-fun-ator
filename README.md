@@ -1,7 +1,8 @@
 Hy-fun-ator
 by M.J. Brechner
 
-This is a simple site to help convert hyphens to various styles of dashes. Input some text and click the button to be presented with a smorgasbord of dashes.
+The Hy-fun-ator converts any hyphenated text to allow the user to choose from various styles of dashes.
+Also included is the Apostrophe'nator, which offers the option of multiple versions of the apostrophe.
 
 Viewable at: https://mjbrechner.github.io/hy-fun-ator/
 
