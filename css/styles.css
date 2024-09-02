@@ -30,7 +30,7 @@ p {
 #change-mode-button {
     position: absolute;
     top: 5px;
-    right: 8px;
+    left: 8px;
     background-color: #A27B5C;
     color: #DCD7C9;
     padding: .2em;
@@ -54,7 +54,7 @@ p {
 #news {
     color: #A27B5C;
     position: absolute;
-    left: 5px;
+    right: 5px;
     top: 5px;
     width: min-content;
     height: min-content;
@@ -237,7 +237,7 @@ a {
     }
 
     #change-mode-button {
-        font-size: .85em;
+        font-size: .9em;
     }
 
     #info-text {
@@ -314,7 +314,7 @@ a {
     }
 
     #change-mode-button {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     #info-text {
