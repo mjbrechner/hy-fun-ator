@@ -6,4 +6,4 @@ Also included is the Apostrophe'nator, which offers the option of multiple versi
 
 Viewable at: https://mjbrechner.github.io/hy-fun-ator/
 
-© 2022-2023 M.J. Brechner
+© 2022-2024 M.J. Brechner

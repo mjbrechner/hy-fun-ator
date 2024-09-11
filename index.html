@@ -27,17 +27,13 @@
 
     <div id="updateInfo" onclick="hideUpdateInfo()">
         <p>27 August 2024: Both modes use the same html site, allowing for smoother toggling between the two.</p>
-
         <p>16 March 2024: Added the Apostrophe'nator.</p>
-
         <p>26 February 2024: Added a "no dash, no space" option.</p>
-
         <p>3 August 2023: Added an alternate version of the hyphen found in Unicode.
             The most common hyphen, referred to as the "hyphen-minus,"
             appears on most keyboards and is used for a minus sign, dash, or hyphen.
             This version of the hyphen has been with the Hy-fun-ator since the beginning,
             but has now been renamed "Hyphen-minus."</p>
-
         <p>A different version of hyphen, used in Unicode, appears on occassion, though this is just
             a version of the standard hyphen. Despite looking virtually identical to the hyphen-minus,
             it is treated as a unique character. This update adds functionality for this character to
@@ -45,6 +41,8 @@
     </div>
 
     <main onclick="hideUpdateInfo()">
+        <button id="change-mode-button" onclick="changeMode()">Apostrophe'nator</button>
+        
         <div class="heading">
             <h1 id="title">Hy-fun-ator</h1>
             <h2 id="title-2">putting the fun into hyphenation</h2>
@@ -52,8 +50,6 @@
                 Want to see your hyphenated text with all kinds of possible dashes? Type something into the box and
                 click the button to transform your existing hyphenation into a smorgasbord of dashes.
             </div>
-
-            <button id="change-mode-button" onclick="changeMode()">Apostrophe'nator</button>
 
             <div class="main-box">
                 <input type="text" id="original-text" aria-label="textbox" rows="1"></input>
