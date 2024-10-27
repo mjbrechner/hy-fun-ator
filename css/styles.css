@@ -31,14 +31,14 @@ p {
     position: absolute;
     top: 5px;
     left: 8px;
-    background-color: #A27B5C;
+    background-color: #705540;
     color: #f1f0eb;
     padding: .2em;
     margin: 0;
     font-size: .75em;
-    border: 2px solid #A27B5C;
+    border: 2px solid #705540;
     border-radius: 5px;
-    box-shadow: 3px 3px #3F4E4F;
+    box-shadow: 3px 3px #A27B5C;
     cursor: pointer;
 }
 
